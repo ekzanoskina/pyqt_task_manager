@@ -14,7 +14,10 @@ class HomePage(QWidget):
         # initialize the view
         self.ui = uic.loadUi("HomePage.ui", self)
 
-        self.ui.selected_date.setText(f'{date.today().strftime("%A")}, {date.today().strftime("%d.%m.%Y")}')
+        # sets today as an initial date
+        self.set_date_text(date.today())
+
+        #creates task and calendar widgets
         self.tasks = TasksWidget(parent=self, day=date.today(), db=self.db)
         self.calendar = CustomCalendar(parent=self, db=self.db)
 
@@ -26,11 +29,15 @@ class HomePage(QWidget):
         self.calendar.DateChanged.connect(self.set_date_text)
         self.calendar.DateChanged.connect(self.tasks.set_selected_date)
 
+
     def set_date_text(self, selected_date_datetime):
+        """Changes the date format"""
         selected_date_str = selected_date_datetime.strftime("%d.%m.%Y")
         selected_date_weekday = selected_date_datetime.strftime("%A")
         self.ui.selected_date.setText(f'{selected_date_weekday}, {selected_date_str}')
 
     def update(self):
+        """Updates the page"""
         self.tasks.show_tasks()
+        self.calendar.setSelectedDate(date.today())
 

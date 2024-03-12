@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>121</width>
-    <height>49</height>
+    <width>209</width>
+    <height>80</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -18,13 +24,16 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <property name="spacing">
-    <number>0</number>
+    <number>1</number>
+   </property>
+   <property name="sizeConstraint">
+    <enum>QLayout::SetNoConstraint</enum>
    </property>
    <property name="leftMargin">
-    <number>5</number>
+    <number>2</number>
    </property>
    <property name="rightMargin">
-    <number>5</number>
+    <number>0</number>
    </property>
    <item>
     <widget class="QCheckBox" name="checkBox_3">
@@ -40,11 +49,30 @@
     </widget>
    </item>
    <item>
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
     <widget class="QPushButton" name="view_btn">
      <property name="minimumSize">
       <size>
-       <width>16</width>
-       <height>16</height>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -70,14 +98,20 @@ QPushButton {
     <widget class="QPushButton" name="edit_btn">
      <property name="minimumSize">
       <size>
-       <width>16</width>
-       <height>16</height>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
       </size>
      </property>
      <property name="baseSize">
       <size>
-       <width>30</width>
-       <height>30</height>
+       <width>20</width>
+       <height>20</height>
       </size>
      </property>
      <property name="autoFillBackground">
@@ -106,14 +140,20 @@ QPushButton {
     <widget class="QPushButton" name="delete_btn">
      <property name="minimumSize">
       <size>
-       <width>16</width>
-       <height>16</height>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
       </size>
      </property>
      <property name="baseSize">
       <size>
-       <width>30</width>
-       <height>30</height>
+       <width>20</width>
+       <height>20</height>
       </size>
      </property>
      <property name="autoFillBackground">

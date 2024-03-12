@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Tuple, List
 from Task import Task, BaseClass
 from Note import Note
 from sqlalchemy import create_engine, desc
@@ -33,7 +33,7 @@ class DB:
         #     sleep(0.1)
 
     def get_several_days_tasks(self, date_filter: list, state_filter: bool) -> Tuple[Task, ...]:
-        """Returns tuple of tasks from given day."""
+        """Returns list of tuple from given day."""
         date_filtered_query = self._session.query(Task).filter(Task.scheduled_date >= date_filter[0]).filter(Task.scheduled_date <= date_filter[1]).order_by(Task.scheduled_date)
         if state_filter is not None:
             state_filtered_query = date_filtered_query.filter(
@@ -50,7 +50,7 @@ class DB:
         return scheduled_dates
 
     def save_task(self, task: Task):
-        """Saves task in database."""
+        """Saves task to database."""
         self._session.add(task)
         self._session.commit()
 
@@ -61,10 +61,15 @@ class DB:
 
 
     def save_note(self, note: Note):
-        """Saves task in database."""
+        """Saves task to database."""
         self._session.add(note)
         self._session.commit()
 
     def get_notes(self):
-        notes_query = self._session.query(Note).order_by(desc(Note.id))
+        notes_query = self._session.query(Note).order_by(Note.id)
         return notes_query.all()
+
+    def delete_note(self, note: Note):
+        """Deletes task from database."""
+        self._session.delete(note)
+        self._session.commit()

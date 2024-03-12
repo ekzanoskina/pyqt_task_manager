@@ -10,11 +10,9 @@ class TaskViewingWidget(TaskFormTemplate):
     editClicked = pyqtSignal(Task)
 
     def __init__(self, parent=None, db=None):
-                 # on_cancel: Callable
         super().__init__(parent)
         self._db = db
         self.confirm_button.setText('Edit')
-
         self.confirm_button.clicked.connect(self.emitEditSignal)
         self._task = None
         self.summary_line_edit.setReadOnly(True)

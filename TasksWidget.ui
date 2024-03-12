@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>329</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -95,6 +95,18 @@
    </item>
    <item>
     <widget class="QTreeView" name="tree_view">
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="autoScroll">
+      <bool>false</bool>
+     </property>
+     <property name="autoScrollMargin">
+      <number>16</number>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectItems</enum>
+     </property>
      <property name="indentation">
       <number>0</number>
      </property>
@@ -107,13 +119,6 @@
      <attribute name="headerVisible">
       <bool>false</bool>
      </attribute>
-    </widget>
-   </item>
-   <item>
-    <widget class="QListView" name="list_view">
-     <property name="itemAlignment">
-      <set>Qt::AlignHCenter</set>
-     </property>
     </widget>
    </item>
   </layout>

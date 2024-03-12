@@ -13,9 +13,7 @@ class TaskCreationWidget(TaskFormTemplate):
 
         self._db = db
 
-        # self.cancel_button.clicked.connect(on_cancel)
         self.setWindowTitle('Task creation')
-
         self.confirm_button.setText('Save')
         self.confirm_button.clicked.connect(self._on_create)
 

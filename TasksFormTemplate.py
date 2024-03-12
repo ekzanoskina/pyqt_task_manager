@@ -6,7 +6,6 @@ from datetime import date, datetime, timedelta
 
 class TaskFormTemplate(QDialog):
     """UI template for creating and editing tasks."""
-
     def __init__(self, parent=None):
         super(TaskFormTemplate, self).__init__(parent)
         self.setWindowTitle('Task creation')
