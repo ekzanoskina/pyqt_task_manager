@@ -1,0 +1,54 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>icon/close_grey.svg</file>
+    <file>icon/close_white.svg</file>
+    <file>icon/close_black.svg</file>
+    <file>icon/flower.svg</file>
+    <file>icon/tasks_grey.svg</file>
+    <file>icon/tasks_white.svg</file>
+    <file>icon/calendar_grey.svg</file>
+    <file>icon/calendar_white.svg</file>
+    <file>icon/notes_white.svg</file>
+    <file>icon/notes_grey.svg</file>
+    <file>icon/notes_white.svg</file>
+    <file>icon/notes_grey.svg</file>
+    <file>icon/icons8-home-48.svg</file>
+    <file>icon/home_white_48dp.svg</file>
+    <file>icon/task_item/edit_black_48dp.svg</file>
+    <file>icon/home_grey_48dp.svg</file>
+    <file>icon/task_item/delete.svg</file>
+    <file>resource.qrc</file>
+    <file>icon/account-logout-64.ico</file>
+    <file>icon/activity-feed-32.ico</file>
+    <file>icon/activity-feed-48.ico</file>
+    <file>icon/close-window-64.ico</file>
+    <file>icon/dashboard-5-32.ico</file>
+    <file>icon/dashboard-5-48.ico</file>
+    <file>icon/group-32.ico</file>
+    <file>icon/group-48.ico</file>
+    <file>icon/home-4-32.ico</file>
+    <file>icon/home-4-48.ico</file>
+    <file>icon/Logo.png</file>
+    <file>icon/menu-4-32.ico</file>
+    <file>icon/product-32.ico</file>
+    <file>icon/product-48.ico</file>
+    <file>icon/search-13-48.ico</file>
+    <file>icon/user-48.ico</file>
+    <file>icon/home.png</file>
+    <file>icon/home.svg</file>
+  </qresource>
+  <qresource prefix="task_item_icons">
+    <file>icon/task_item/delete_black_48dp.svg</file>
+    <file>icon/task_item/edit_black_48dp.svg</file>
+    <file>icon/task_item/visibility_black_48dp.svg</file>
+    <file>icon/task_item/edit_black_48dp.svg</file>
+    <file>icon/task_item/edit_black_36dp.svg</file>
+    <file>icon/task_item/edit_24dp.svg</file>
+    <file>icon/task_item/view_black_24dp.svg</file>
+    <file>icon/task_item/delete_outline_black_24dp.svg</file>
+    <file>icon/task_item/delete.svg</file>
+    <file>icon/task_item/view.svg</file>
+    <file>icon/task_item/delete.png</file>
+    <file>icon/task_item/edit.png</file>
+  </qresource>
+</RCC>

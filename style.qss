@@ -1,0 +1,255 @@
+/*= Style for mainwondow START
+    ========================================= */
+    #MainWindow {
+        background-color: #fff;
+    }
+/*= END
+    ========================================= */
+
+
+/*= Style for button to change menu START
+    ========================================= */
+    #change_btn {
+        padding: 5px;
+        border: none;
+        width: 30px;
+        height: 30px;
+    }
+/*= END
+    ========================================= */
+
+
+/*= Style for header widget START
+    ========================================= */
+    #header_widget {
+        background-color: #f9fafd;
+    }
+/*= END
+    ========================================= */
+
+
+/*= Style for menu with icon only START
+    ========================================= */
+  	/* style for widget */
+    #icon_only_widget {
+		background-color: #313a46;
+		width:50px;
+	}
+
+    /* style for QPushButton and QLabel */
+	#icon_only_widget QPushButton, QLabel {
+		height:50px;
+		border:none;
+		/* border-bottom: 1px solid #b0b0b0; */
+	}
+
+	#icon_only_widget QPushButton:hover {
+		background-color: rgba( 86, 101, 115, 0.5);
+	}
+
+	/* style for logo image */
+	#logo_label_1 {
+		padding: 5px
+	}
+/*= END
+    ========================================= */
+
+
+/*= Style for menu with icon and text START
+    ========================================= */
+	/* style for widget */
+	#full_menu_widget {
+		background-color: #313a46;
+	}
+
+	/* style for QPushButton */
+	#full_menu_widget QPushButton {
+		border:none;
+		border-radius: 3px;
+		text-align: left;
+		padding: 8px 0 8px 15px;
+		color: #788596;
+	}
+
+	#full_menu_widget QPushButton:hover {
+		background-color: rgba( 86, 101, 115, 0.5);
+	}
+
+	#full_menu_widget QPushButton:checked {
+		color: #fff;
+	}
+
+	/* style for logo image */
+	#logo_label_2 {
+		padding: 5px;
+		color: #fff;
+	}
+
+	/* style for APP title */
+	#logo_label_3 {
+		padding-right: 10px;
+		color: #fff;
+	}
+/*= END
+    ========================================= */
+
+
+/*= Style for search button START
+    ========================================= */
+	#search_btn {
+		border: none;
+	}
+/*= END
+    ========================================= */
+
+
+/*= Style for search input START
+    ========================================= */
+	#search_input {
+		border: none;
+		padding: 5px 10px;
+	}
+
+
+/*= END
+    ========================================= */
+
+/*= Style for search input START
+    ========================================= */
+
+
+/*= END
+    ========================================= */
+
+
+/*= Style for user information button START
+    ========================================= */
+	#user_btn {
+		border: none;
+	}
+
+/*= END
+    ========================================= */
+
+/*= Style for user information button START
+    ========================================= */
+QCalendarWidget QAbstractItemView:enabled /* date of actual month */{
+
+   border: 1px solid #eaeaeb;
+   margin: 0px;
+   padding: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: 0px;
+
+}
+
+QCalendarWidget QWidget {
+
+    alternate-background-color: rgb(255,255,255);
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+
+QCalendarWidget QSpinBox {
+    margin: 0px;
+    padding: 0px;
+}
+#qt_calendar_navigationbar {
+    background-color: #90b9d5;
+    min-height: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+#qt_calendar_yearbutton:pressed,
+#qt_calendar_monthbutton:pressed {
+    background-color: #90b9d5;
+}
+
+#qt_calendar_yearedit {
+    min-width: 50px;
+    color: white;
+    background: transparent;         /* Сделать фон окна ввода прозрачным */
+}
+
+
+/*= END
+    ========================================= */
+
+#tasks_widget {
+margin: 0 px;
+layout_spacing: 0px;
+}
+QWidget {
+margin: 0px;
+}
+
+QTreeView {
+    show-decoration-selected: 1;
+}
+
+QTreeView::item {
+     border: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+QTreeView::item:hover {
+    background: white;
+    border: none;
+}
+
+QTreeView::item:selected {
+    border: none;
+}
+
+QTreeView::item:selected:active{
+    background: transparent;
+}
+
+QTreeView::item:selected:!active {
+    background: transparent;
+}
+
+QTreeView::branch:has-siblings:!adjoins-item {
+    border-image: none;
+}
+
+QTreeView::branch:has-siblings:adjoins-item {
+    border-image: none;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+    border-image: none;
+}
+
+
+
+
+QTreeView::item:!selected:hover,
+QListView::item:!selected:hover,
+QTableView::item:!selected:hover,
+QColumnView::item:!selected:hover {
+  outline: 0;
+  color: #19232D;
+  background-color: #f9fafd;
+  alignment: center
+}
+
+QCheckBox:hover {
+    border-bottom: none;
+}
+#note_item_2 {
+  border: 1px solid #C0C4C8;
+  border-radius: 4px;
+  background-color: #E6E6FA;
+}
+
+#note_summary {
+  background-color: transparent;
+}

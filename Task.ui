@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>121</width>
+    <height>49</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <item>
+    <widget class="QCheckBox" name="checkBox_3">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Lunch</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="view_btn">
+     <property name="minimumSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base styling for buttons */
+QPushButton {
+    border: none; /* Remove border for a flat design */
+    max-width: 20px; /* Limit button width for a uniform look */
+    max-height: 20px; /* Limit button height for a uniform look */
+    /* Note: 'icon' property should be set programmatically in PyQt */
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/task_item_icons/icon/task_item/visibility_black_48dp.svg</normaloff>:/task_item_icons/icon/task_item/visibility_black_48dp.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="edit_btn">
+     <property name="minimumSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base styling for buttons */
+QPushButton {
+    border: none; /* Remove border for a flat design */
+    max-width: 20px; /* Limit button width for a uniform look */
+    max-height: 20px; /* Limit button height for a uniform look */
+    /* Note: 'icon' property should be set programmatically in PyQt */
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/task_item_icons/icon/task_item/edit_black_48dp.svg</normaloff>:/task_item_icons/icon/task_item/edit_black_48dp.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="delete_btn">
+     <property name="minimumSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base styling for buttons */
+QPushButton {
+    border: none; /* Remove border for a flat design */
+    max-width: 20px; /* Limit button width for a uniform look */
+    max-height: 20px; /* Limit button height for a uniform look */
+    /* Note: 'icon' property should be set programmatically in PyQt */
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/task_item_icons/icon/task_item/delete_black_48dp.svg</normaloff>:/task_item_icons/icon/task_item/delete_black_48dp.svg</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>clicked()</slot>
+ </slots>
+</ui>
