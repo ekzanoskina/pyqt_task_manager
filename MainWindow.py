@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
         super().__init__(*args, **kwargs)
         self.db = DB()
         # Load the main window UI
-        self.ui = uic.loadUi("MainWindow1.ui", self)
+        self.ui = uic.loadUi("MainWindow.ui", self)
 
         # menu initial state
         self.ui.icon_only_widget.hide()

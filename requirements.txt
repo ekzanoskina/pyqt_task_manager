@@ -1,0 +1,7 @@
+SQLAlchemy~=2.0.28
+PyQt6~=6.6.1
+darkdetect==0.7.1
+greenlet==3.0.3
+pyqtdarktheme==2.1.0
+
+
