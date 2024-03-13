@@ -13,7 +13,7 @@ class NoteItem(QWidget):
     delete = pyqtSignal(Note)
     def __init__(self, note: Note):
         super().__init__()
-        self.ui = uic.loadUi('note.ui', self)
+        self.ui = uic.loadUi('Note.ui', self)
         self.note = note
         self.ui.note_summary.setReadOnly(True)
         self.ui.note_summary.setText(note.summary)
