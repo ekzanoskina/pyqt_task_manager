@@ -21,6 +21,8 @@ class TaskEditionWidget(TaskFormTemplate):
         self.notification_time.timeChanged.connect(self._enforce_task_change)
         self.date_choice.currentTextChanged.connect(self._enforce_task_change)
 
+        self.setWindowTitle('Task edition')
+
     def set_task(self, task):
         self._task = task
         self.picked_date = task.scheduled_date

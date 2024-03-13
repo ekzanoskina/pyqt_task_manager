@@ -22,7 +22,7 @@ class DB:
 
     def get_one_day_tasks(self, date_filter: date, state_filter: bool) -> Tuple[Task, ...]:
         """Returns tuple of tasks from given day."""
-        date_filtered_query = self._session.query(Task).filter(Task.scheduled_date == date_filter).order_by(desc(Task.id))
+        date_filtered_query = self._session.query(Task).filter(Task.scheduled_date == date_filter).order_by(Task.id)
         if state_filter is not None:
             state_filtered_query = date_filtered_query.filter(
                 Task.done == state_filter)
@@ -34,7 +34,7 @@ class DB:
 
     def get_several_days_tasks(self, date_filter: list, state_filter: bool) -> Tuple[Task, ...]:
         """Returns list of tuple from given day."""
-        date_filtered_query = self._session.query(Task).filter(Task.scheduled_date >= date_filter[0]).filter(Task.scheduled_date <= date_filter[1]).order_by(Task.scheduled_date)
+        date_filtered_query = self._session.query(Task).filter(Task.scheduled_date >= date_filter[0]).filter(Task.scheduled_date <= date_filter[1]).order_by(Task.scheduled_date).order_by(Task.id)
         if state_filter is not None:
             state_filtered_query = date_filtered_query.filter(
                 Task.done == state_filter)

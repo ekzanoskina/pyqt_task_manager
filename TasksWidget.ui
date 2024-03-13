@@ -95,6 +95,14 @@
    </item>
    <item>
     <widget class="QTreeView" name="tree_view">
+     <property name="focusPolicy">
+      <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#tree_view {
+margin: 5px;
+}</string>
+     </property>
      <property name="horizontalScrollBarPolicy">
       <enum>Qt::ScrollBarAlwaysOff</enum>
      </property>
@@ -107,8 +115,11 @@
      <property name="selectionBehavior">
       <enum>QAbstractItemView::SelectItems</enum>
      </property>
+     <property name="horizontalScrollMode">
+      <enum>QAbstractItemView::ScrollPerItem</enum>
+     </property>
      <property name="indentation">
-      <number>0</number>
+      <number>5</number>
      </property>
      <property name="rootIsDecorated">
       <bool>false</bool>
@@ -116,8 +127,14 @@
      <property name="headerHidden">
       <bool>true</bool>
      </property>
+     <property name="expandsOnDoubleClick">
+      <bool>false</bool>
+     </property>
      <attribute name="headerVisible">
       <bool>false</bool>
+     </attribute>
+     <attribute name="headerMinimumSectionSize">
+      <number>50</number>
      </attribute>
     </widget>
    </item>

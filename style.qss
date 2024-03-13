@@ -114,13 +114,6 @@
 /*= END
     ========================================= */
 
-/*= Style for search input START
-    ========================================= */
-
-
-/*= END
-    ========================================= */
-
 
 /*= Style for user information button START
     ========================================= */
@@ -131,7 +124,7 @@
 /*= END
     ========================================= */
 
-/*= Style for user information button START
+/*= Style for calendar START
     ========================================= */
 QCalendarWidget QAbstractItemView:enabled /* date of actual month */{
 
@@ -153,8 +146,6 @@ QCalendarWidget QWidget {
     padding: 0px;
 
 }
-
-
 
 QCalendarWidget QSpinBox {
     margin: 0px;
@@ -181,6 +172,8 @@ QCalendarWidget QSpinBox {
 /*= END
     ========================================= */
 
+/*= Style for tasks tree view START
+    ========================================= */
 #tasks_widget {
 margin: 0 px;
 layout_spacing: 0px;
@@ -229,8 +222,6 @@ QTreeView::branch:!has-children:!has-siblings:adjoins-item {
 }
 
 
-
-
 QTreeView::item:!selected:hover,
 QListView::item:!selected:hover,
 QTableView::item:!selected:hover,
@@ -244,6 +235,15 @@ QColumnView::item:!selected:hover {
 QCheckBox:hover {
     border-bottom: none;
 }
+
+
+/*= END
+    ========================================= */
+
+
+/*= Style for notes view START
+    ========================================= */
+
 #note_item_2 {
   border: 1px solid #C0C4C8;
   border-radius: 4px;
@@ -253,10 +253,5 @@ QCheckBox:hover {
 #note_summary {
   background-color: transparent;
 }
-
-#checkBox_3 {
-    white-space: nowrap; /* Запрещаем перенос строк */
-    overflow: hidden; /* Обрезаем все, что не помещается в область */
-    padding: 5px; /* Поля вокруг текста */
-    text-overflow: ellipsis; /* Добавляем многоточие */
-   }
+/*= END
+    ========================================= */

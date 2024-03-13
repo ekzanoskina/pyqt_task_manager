@@ -21,6 +21,7 @@ class TaskViewingWidget(TaskFormTemplate):
         self.notification_time.setReadOnly(True)
         self.date_choice.setEnabled(False)
         self.confirm_button.setEnabled(True)
+        self.setWindowTitle('Task viewing')
 
     def emitEditSignal(self):
         self.editClicked.emit(self._task)

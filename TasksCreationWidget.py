@@ -17,6 +17,8 @@ class TaskCreationWidget(TaskFormTemplate):
         self.confirm_button.setText('Save')
         self.confirm_button.clicked.connect(self._on_create)
 
+        self.setWindowTitle('Task creation')
+
     def _on_create(self):
         """Creates task."""
         scheduled_date = self.picked_date

@@ -2,13 +2,14 @@ from PyQt6.QtCore import QDateTime
 from PyQt6.QtWidgets import QPushButton, QHBoxLayout, QCalendarWidget, QVBoxLayout, QDialog, QLineEdit, QTextEdit, \
     QComboBox, QCheckBox, QTimeEdit
 from datetime import date, datetime, timedelta
+from CustomCalendarWidget import CustomCalendar
 
 
 class TaskFormTemplate(QDialog):
     """UI template for creating and editing tasks."""
     def __init__(self, parent=None):
         super(TaskFormTemplate, self).__init__(parent)
-        self.setWindowTitle('Task creation')
+
         main_layout = QVBoxLayout()
         self.setLayout(main_layout)
         self.picked_date = datetime.now().date()
@@ -91,10 +92,12 @@ class DateChoiceDialog(QDialog):
     def __init__(self, parent=None):
         super(DateChoiceDialog, self).__init__(parent)
         self.parent = parent
-
         main_layout = QVBoxLayout()
-        self.calendar = QCalendarWidget()
+        # Create and add calendar
+        self.calendar = CustomCalendar()
         main_layout.addWidget(self.calendar)
+
+        #Create and add buttons
         button_layout = QHBoxLayout()
         self.save_btn = QPushButton('Save')
         self.cancel_btn = QPushButton('Cancel')
@@ -105,6 +108,9 @@ class DateChoiceDialog(QDialog):
         self.setLayout(main_layout)
         self.cancel_btn.clicked.connect(self.closeDialog)
         self.save_btn.clicked.connect(self.saveDate)
+
+        self.resize(350, 300)
+        self.setWindowTitle('Date selection')
 
     def closeDialog(self):
         self.close()

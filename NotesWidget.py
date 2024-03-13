@@ -49,6 +49,7 @@ class NotesWidget(QWidget):
 
     def create_note(self):
         summary = self.ui.note_line_edit.text()
+        self.ui.note_line_edit.setText('')
         note = Note(summary)
         self._db.save_note(note)
         self.show_notes()
@@ -65,7 +66,6 @@ class NotesWidget(QWidget):
             note_item = NoteItem(notes_list[i])
             note_item.save.connect(self.save_changes)
             note_item.delete.connect(partial(self.delete_note, note_item=note_item))
-            self.positions[notes_list[i].id] = (column, row)
             self.paint_note(note_item)
             self.ui.notes_grid_layout.addWidget(note_item, row, column)
             column += 1
@@ -73,11 +73,13 @@ class NotesWidget(QWidget):
     def save_changes(self, note):
         self._db.save_note(note)
 
-    def delete_note(self, note, note_item =None):
+    def delete_note(self, note, note_item=None):
+
+        # self.ui.notes_grid_layout.hideWidget(note_item)
+        note_item.hide()
+        # note_item = None
         self._db.delete_note(note)
-        self.ui.notes_grid_layout.removeWidget(note_item)
-        note_item.deleteLater()
-        note_item = None
+
 
     def paint_note(self, note_item):
         """Adds colors to note stickers"""

@@ -10,7 +10,7 @@ class CustomCalendar(QCalendarWidget):
 
     DateChanged = pyqtSignal(date)
 
-    def __init__(self, db:DB, parent=None):
+    def __init__(self, db:DB=None, parent=None):
         super().__init__(parent)
 
         self.db = db
@@ -27,6 +27,7 @@ class CustomCalendar(QCalendarWidget):
         self.setWeekdayTextFormat(Qt.DayOfWeek.Sunday, fmtBlue)
         self.setWeekdayTextFormat(Qt.DayOfWeek.Saturday, fmtBlue)
 
+
     def calendarDateChanged(self):
         """Emits signal that calendar selected date has been changed"""
         dateSelected = self.selectedDate().toPyDate()
@@ -35,6 +36,7 @@ class CustomCalendar(QCalendarWidget):
     def paintCell(self, painter, rect, date):
         """Draws ellipses and marks days with tasks """
         super().paintCell(painter, rect, date)
-        if date in self.db.get_all_dates():
-            painter.setBrush(QColor(0, 0, 85))
-            painter.drawEllipse(rect.topRight() + QPoint(-7, 10), 3, 3)
+        if self.db:
+            if date in self.db.get_all_dates():
+                painter.setBrush(QColor(0, 0, 85))
+                painter.drawEllipse(rect.topRight() + QPoint(-7, 10), 3, 3)
